@@ -445,7 +445,8 @@ class Swagger(object):
 
         # hack to remove key 'definitions' from the spec to create valid OAS3
         if openapi_version:
-            del data['definitions']
+            if int(openapi_version[0]) > 2:
+                del data['definitions']
 
         self.apispecs[endpoint] = data
         return data
