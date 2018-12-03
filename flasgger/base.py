@@ -442,6 +442,11 @@ class Swagger(object):
                         paths[srule][key].update(val)
                     else:
                         paths[srule][key] = val
+
+        # hack to remove key 'definitions' from the spec to create valid OAS3
+        if openapi_version:
+            del data['definitions']
+
         self.apispecs[endpoint] = data
         return data
 
