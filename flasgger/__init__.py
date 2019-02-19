@@ -1,5 +1,5 @@
 
-__version__ = '0.9.2-IKNL-0.0.1'
+__version__ = '0.9.3'
 __author__ = 'Bruno Rocha'
 __email__ = 'rochacbruno@gmail.com'
 

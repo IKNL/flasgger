@@ -27,9 +27,8 @@ def grep(attrname):
     strval, = re.findall(pattern, file_text)
     return strval
 
-
 setup(
-    name='flasgger',
+    name=f'flasgger',
     version=grep('__version__'),
     url='https://github.com/IKNL/flasgger',
     license='MIT',
